@@ -7,13 +7,8 @@ export function generateStaticParams() {
   return blogs.map((blog) => ({ slug: blog.slug }));
 }
 
-type PageProps = {
-  params: {
-    slug: string;
-  };
-};
 
-export default function Page({ params }: PageProps) {
+export default function Page({ params }: { params: { slug: string } }) {
   const blog = blogs.find((b) => b.slug === params.slug);
 
   if (!blog) {
