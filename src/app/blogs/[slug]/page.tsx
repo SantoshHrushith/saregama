@@ -3,7 +3,6 @@ import blogs from "@/data/blogs.json";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 
-// This is correct for Next.js App Router
 interface PageProps {
   params: { slug: string };
 }
@@ -70,4 +69,4 @@ export default function Page({ params }: PageProps) {
       <Footer />
     </>
   );
-}
+} 
