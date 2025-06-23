@@ -3,7 +3,7 @@ import blogs from "@/data/blogs.json";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 
-interface PageProps {
+interface Props {
   params: { slug: string };
 }
 
@@ -11,7 +11,7 @@ export function generateStaticParams() {
   return blogs.map((blog) => ({ slug: blog.slug }));
 }
 
-export default function Page({ params }: PageProps) {
+export default function Page({ params }: Props) {
   const blog = blogs.find((b) => b.slug === params.slug);
 
   if (!blog) {
