@@ -5,6 +5,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  experimental: {
+    staleTimes: {
+      dynamic: 30,
+    },
+  },
   // assetPrefix: './',
   // basePath: '',
 };
