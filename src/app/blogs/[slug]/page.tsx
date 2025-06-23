@@ -3,16 +3,11 @@ import blogs from "@/data/blogs.json";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 
-interface Props {
-  params: { slug: string };
-}
+type Params = Promise<{ slug: string }>;
 
-export function generateStaticParams() {
-  return blogs.map((blog) => ({ slug: blog.slug }));
-}
-
-export default function Page({ params }: Props) {
-  const blog = blogs.find((b) => b.slug === params.slug);
+export default async function Page({ params }: { params: Params }) {
+  const { slug } = await params;
+  const blog = blogs.find((b) => b.slug === slug);
 
   if (!blog) {
     return (
@@ -44,7 +39,7 @@ export default function Page({ params }: Props) {
           <span className="text-xs text-gray-500">{blog.date}</span>
           <div className="mt-6 text-lg space-y-4">
             {Array.isArray(blog.content) ? (
-              blog.content.map((para, idx) => (
+              blog.content.map((para: string, idx: number) => (
                 <ReactMarkdown key={idx}>{para}</ReactMarkdown>
               ))
             ) : (
@@ -53,7 +48,7 @@ export default function Page({ params }: Props) {
           </div>
           {blog.images && blog.images.length > 0 && (
             <div className="mt-8 space-y-4">
-              {blog.images.map((img, idx) => (
+              {blog.images.map((img: string, idx: number) => (
                 <img
                   key={idx}
                   src={img}
@@ -69,4 +64,4 @@ export default function Page({ params }: Props) {
       <Footer />
     </>
   );
-} 
+}
