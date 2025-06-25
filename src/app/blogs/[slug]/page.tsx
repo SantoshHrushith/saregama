@@ -76,10 +76,10 @@ export default function Page({ params }: { params: { slug: string } }) {
 
   const publisher = "Saga Team";
 
-  const relatedBlogs = blogs
-    .filter((b) => b.slug !== params.slug)
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, 3);
+  // const relatedBlogs = blogs
+  //   .filter((b) => b.slug !== params.slug)
+  //   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  //   .slice(0, 3);
 
   if (!blog) {
     return (
@@ -154,7 +154,7 @@ export default function Page({ params }: { params: { slug: string } }) {
             </div>
           </div>
           {/* Related Blogs */}
-          <div className={styles.relatedBlogs}>
+          {/* <div className={styles.relatedBlogs}>
             <h2 className={styles.relatedTitle}>Related Blogs</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {relatedBlogs.map((rel) => (
@@ -175,7 +175,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                 </Link>
               ))}
             </div>
-          </div>
+          </div> */}
         </section>
       </div>
       <Footer />
