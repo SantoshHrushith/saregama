@@ -155,7 +155,7 @@ export default async function Page({ params }: { params: Params }) {
             </div>
           </div>
           {/* Related Blogs */}
-          {/* <div className={styles.relatedBlogs}>
+          <div className={styles.relatedBlogs}>
             <h2 className={styles.relatedTitle}>Related Blogs</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {relatedBlogs.map((rel) => (
@@ -176,7 +176,7 @@ export default async function Page({ params }: { params: Params }) {
                 </Link>
               ))}
             </div>
-          </div> */}
+          </div>
         </section>
       </div>
       <Footer />
