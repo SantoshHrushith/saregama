@@ -5,10 +5,15 @@
     "slug": "leather-craftsmanship",
     "excerpt": "Discover the timeless beauty and skill behind our leather goods.",
     "content": [
-      "Full content for **The Art of Leather Craftsmanship**.",
-      "_This is the second paragraph for this blog post._",
-      "And here is a third paragraph with an image below."
-    ],
+    "Welcome to the world of **Saga Leather** — where _tradition meets innovation_.",
+    "For centuries, leather craftsmanship has been a symbol of luxury and durability. At **Saga**, we honor this legacy by blending _classic techniques_ with modern design.",
+    "Every piece begins with the careful selection of the finest hides. Our artisans, with decades of experience, _hand-cut_ and _stitch_ each product, ensuring that every detail is perfect.",
+    "![Saga Leather Tools](https://eubiq.b-cdn.net/saga/Surface%20track.png)",
+    "We believe that **quality is never an accident**. It is always the result of _intelligent effort_.",
+    "From the subtle aroma of tanned leather to the rich patina that develops over time, each Saga creation tells a story. **No two pieces are ever truly alike.**",
+    "Whether it's a bespoke wallet or a statement bag, our commitment to excellence shines through. _Experience the difference of true craftsmanship with Saga._"
+  ],
+    "previewImage": "https://eubiq.b-cdn.net/saga/Surface%20track.png",
     "images": [
       "https://eubiq.b-cdn.net/saga/Surface%20track.png",
       "https://eubiq.b-cdn.net/saga/pexels-steve.jpg"
@@ -24,6 +29,7 @@
       "Full content for **Power Redefined: The Saga Track System**...",
       "Another paragraph for the second blog with _italics_."
     ],
+    "previewImage": "https://eubiq.b-cdn.net/saga/SAGA_FullProductShot2.png",
     "images": [
       "https://eubiq.b-cdn.net/saga/SAGA_FullProductShot2.png"
     ],
