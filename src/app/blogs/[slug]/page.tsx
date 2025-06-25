@@ -71,7 +71,7 @@ type Params = Promise<{ slug: string }>;
 // }
 
 
-export default function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: { params: { slug: string } }) {
   const blog = blogs.find((b) => b.slug === params.slug);
 
   const publisher = "Saga Team";
