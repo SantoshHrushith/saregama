@@ -71,15 +71,16 @@ type Params = Promise<{ slug: string }>;
 // }
 
 
-export default async function Page({ params }: { params: { slug: string } }) {
-  const blog = blogs.find((b) => b.slug === params.slug);
+export default async function Page({ params }: { params: Params }) {
+  const { slug } = await params;
+  const blog = blogs.find((b) => b.slug === slug);
 
   const publisher = "Saga Team";
 
-  // const relatedBlogs = blogs
-  //   .filter((b) => b.slug !== params.slug)
-  //   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-  //   .slice(0, 3);
+  const relatedBlogs = blogs
+    .filter((b) => b.slug !== slug)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 3);
 
   if (!blog) {
     return (
